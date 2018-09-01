@@ -149,16 +149,6 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
         //return to prevent the rest of the function from excuting
         return   console.log("Unable to connect MongoDb server");
     }
-    console.log("Connected to MongoDb server");
-
-    db.collection('Todos').find().count().then((count) => {
-
-        console.log(`Todos counts: ${count}`);
-
-    },(err) => {
-
-        console.log("Unable to fetch Todos", err)
-    });
 
     // db.close();
 
